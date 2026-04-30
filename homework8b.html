@@ -1,22 +1,176 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Rise to Stardom</title>
 
-<h1>Welcome to Rise to Stardom or Entertainment </h1>
+<style>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #c9d6ff, #e2e2ff, #d4c1ec);
+    overflow-x: hidden;
+}
+
+/* Soft spotlight effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 70%);
+    filter: blur(60px);
+    animation: spotlightMove 6s infinite alternate;
+}
+
+@keyframes spotlightMove {
+    from { transform: translateX(-60%); }
+    to { transform: translateX(-40%); }
+}
+
+.container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Pastel glowing title */
+h1 {
+    font-size: 3.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px #b19cd9,
+        0 0 20px #a2b6ff,
+        0 0 30px #cdb4db;
+    animation: glowPulse 3s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow:
+        0 0 10px #b19cd9,
+        0 0 20px #a2b6ff;
+    }
+    to {
+        text-shadow:
+        0 0 20px #cdb4db,
+        0 0 40px #a2b6ff,
+        0 0 60px #bde0fe;
+    }
+}
+
+/* Fade-in text */
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 15px 0;
+    opacity: 0;
+    color: #2f2f4f;
+    animation: fadeText 2s forwards;
+}
+
+p:nth-child(2) { animation-delay: 1s; }
+p:nth-child(3) { animation-delay: 2s; }
+p:nth-child(4) { animation-delay: 3s; }
+p:nth-child(5) { animation-delay: 4s; }
+
+@keyframes fadeText {
+    to { opacity: 1; }
+}
+
+/* Image with soft glow */
+img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 0 30px rgba(173, 216, 230, 0.6);
+    animation: zoomIn 6s ease-in-out infinite alternate;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 40px;
+}
+
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #a2b6ff, #cdb4db);
+    box-shadow: 0 0 15px rgba(162,182,255,0.6);
+    transition: 0.3s;
+    animation: pulse 3s infinite;
+}
+
+a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(162,182,255,1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(162,182,255,0.5); }
+    50% { box-shadow: 0 0 25px rgba(162,182,255,1); }
+    100% { box-shadow: 0 0 10px rgba(162,182,255,0.5); }
+}
+
+/* Fade in container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Rise to Stardom</h1>
 
 <p>
-      You are walking in the streets of New York City, and suddenly you get tapped on your shoulder. The person who taps you is a scouter for an entertaimnent company. The person hands you their card, and say to contact them if you are interested in become to new big star. 
-    </p>
-    
-    <p> You keep walking since you have class, but you are thinking about what just happened. </p>
-    
-    <p> The choice is on you on whether you want to stay in school or take the risk to go with the label</p>
-    
-    <img src="image/sceneimage.jpg" alt="Scene Image" width="400">
-    
-    <section>
-        
-        <h3><a href="scene1.html">Start Game </a></h3>
+You are walking through the streets of New York City when suddenly someone taps you on the shoulder.
+A scout from an entertainment company hands you a card.
+</p>
 
-  <h3><a href="index.html">Back to Isabel's Portfolio </a></h3>
+<p>
+They tell you to contact them if you're ready to become the next big star.
+</p>
 
-</section>
+<p>
+You keep walking to class... but your mind is somewhere else now.
+</p>
 
+<p>
+The choice is yours: stay in school, or step into the spotlight.
+</p>
+
+<img src="image/sceneimage.jpg" alt="Scene Image">
+
+<div class="buttons">
+    <a href="scene1.html">Start Game</a>
+    <a href="index.html">Back to Portfolio</a>
+</div>
+
+</div>
+
+</body>
+</html>
