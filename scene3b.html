@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Group Formation</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+}
+
+.container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+h1 {
+    color: #6d28d9;
+}
+
+p {
+    color: #444;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.25s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* member options */
+.m3 { background: linear-gradient(135deg, #6366f1, #a78bfa); }
+.m5 { background: linear-gradient(135deg, #ec4899, #a78bfa); }
+.m8 { background: linear-gradient(135deg, #f59e0b, #f43f5e); }
+
+.back {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #9ca3af;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Group Formation 🎶</h1>
+
+<p>The label is forming your group. First, structure your team before choosing a concept.</p>
+
+<h3>How many members?</h3>
+
+<div class="grid">
+
+<a href="groupconcept.html" class="card m3">
+3–4 Members
+</a>
+
+<a href="groupconcept.html" class="card m5">
+5–7 Members
+</a>
+
+<a href="groupconcept.html" class="card m8">
+8+ Members
+</a>
+
+</div>
+
+<a class="back" href="scene1b.html">Go Back</a>
+
+</div>
+
+</body>
+</html>
