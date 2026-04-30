@@ -1,27 +1,151 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Make Your Choice</title>
 
-<h1>Welcome to Rise to Stardom or Entertainment </h1>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
 
-<p> 
-       
-    </p>
-    
-    <p>  </p>
-    
-    
-    <p> You are stuck with what choice to make</p>
-    
-    <img src="image/scene1image.jpg" alt="Scene 1" width="400">
-    
-    <h2>What do you do?</h2>
-    
-    <p>
-        <a href="scene1a.html">Stay a Student</a>
-    </p>
+/* Split background (student vs pop star) */
+.split {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+}
 
-    <p>
-        <a href="scene1b.html">Sign with Label</a>
-    </p>
+.left {
+    width: 50%;
+    background: linear-gradient(135deg, #dbeafe, #c7d2fe); /* soft blue = student */
+}
 
-    <p>
-        <a href="homework8b.html">Back to Start</a>
+.right {
+    width: 50%;
+    background: linear-gradient(135deg, #f5d0fe, #e9d5ff); /* pastel purple = pop star */
+}
+
+/* Main container */
+.container {
+    margin-top: 80px;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Title */
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+/* Text */
+p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Image */
+img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating effect */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Question */
+h2 {
+    margin-top: 20px;
+    color: #222;
+}
+
+/* Buttons */
+.choice {
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Student button */
+.student {
+    background: linear-gradient(45deg, #60a5fa, #818cf8);
+    box-shadow: 0 0 15px rgba(96,165,250,0.7);
+}
+
+/* Pop star button */
+.star {
+    background: linear-gradient(45deg, #f9a8d4, #c084fc);
+    box-shadow: 0 0 15px rgba(192,132,252,0.7);
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+/* Back button */
+.back {
+    display: block;
+    margin-top: 30px;
+    color: #555;
+    text-decoration: none;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="split">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+<div class="container">
+
+<h1>The Choice</h1>
+
+<p>You pause. The card is still in your hand.</p>
+<p>Your future splits into two completely different paths.</p>
+<p><strong>You are stuck with what choice to make.</strong></p>
+
+<img src="image/scene1image.jpg" alt="Scene 1">
+
+<h2>What do you do?</h2>
+
+<a href="scene1a.html" class="choice student">Stay a Student</a>
+
+<a href="scene1b.html" class="choice star">Sign with Label</a>
+
+<a href="homework8b.html" class="back">Back to Start</a>
+
+</div>
+
+</body>
+</html>
