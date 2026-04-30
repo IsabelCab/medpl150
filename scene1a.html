@@ -1,27 +1,117 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stay a Student</title>
 
-<h1>You picked Stay a Student </h1>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f6fa;
+    color: #222;
+}
 
-<p> You decided to keep being a student. As soon as you graduate, you pick what college you go to but still unsure what you want to pursue.</p>
+/* Main container */
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-<p> You think back to the time you were scouted and you figure out that you want to work in Entertainment</p>
+/* Title */
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
 
-<img src="image/sceneonea.jpg" alt="Scene Image 1" width="400">
+/* Paragraphs */
+p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
 
-    <h2>What do you do?</h2>
+/* Image */
+img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 6px;
+}
 
-    <p>
-        <a href="scene2a.html">Public Relations</a>
-    </p>
+/* Section title */
+h2 {
+    margin-top: 25px;
+    font-size: 1.4em;
+}
 
-    <p>
-        <a href="scene2b.html">Management & Design/Production</a>
-    </p>
+/* Buttons */
+.choice {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px auto;
+    padding: 12px;
+    text-align: center;
+    background-color: #4a69bd;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: background 0.2s ease;
+}
 
-    <p>
-        <a href="scene1.html">Go Back</a>
-    </p>
-    
+.choice:hover {
+    background-color: #3b55a0;
+}
+
+/* Back link */
+.back {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    text-decoration: none;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>You Chose to Stay a Student</h1>
+
+<p>
+You decide to continue your path as a student. After graduating, you start thinking seriously about what college you want to attend, but you’re still unsure about your major.
+</p>
+
+<p>
+You think back to the moment you were scouted. Even though you didn’t take that opportunity, you realize you still want to work in the entertainment industry — just in a different way.
+</p>
+
+<img src="image/sceneonea.jpg" alt="Student thinking about future">
+
+<h2>What do you do?</h2>
+
+<a href="scene2a.html" class="choice">Public Relations</a>
+
+<a href="scene2b.html" class="choice">Management & Design / Production</a>
+
+<a href="scene1.html" class="back">← Go Back</a>
+
+</div>
+
 </body>
 </html>
 
