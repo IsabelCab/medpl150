@@ -1,26 +1,131 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign with the Label</title>
 
-<h1>You picked Sign with the Label </h1>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    text-align: center;
+    color: #1f2937;
+}
 
-<p> You decided to take the risk and contact the label</p>
+.container {
+    max-width: 750px;
+    margin: 70px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    animation: fadeIn 1.2s ease-in;
+}
 
-<p> After you talk with them, you decide to sign and now you are discussing with the company what you are thinking for the future</p>
+/* Title feels more exciting */
+h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    color: #4a69bd;
+}
 
-<img src="image/scenetwoa.jpg" alt="Scene Image 2" width="400">
+/* subtle “moment” emphasis */
+.highlight {
+    font-weight: bold;
+    color: #6d28d9;
+}
 
-    <h2>Choose Whether you want to be a Solo or Group</h2>
+/* text */
+p {
+    line-height: 1.6;
+    margin: 12px 0;
+}
 
-    <p>
-        <a href="scene3a.html">Solo</a>
-    </p>
+/* image */
+img {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transform: scale(1);
+    transition: 0.3s;
+}
 
-    <p>
-        <a href="scene3b.html">Group</a>
-    </p>
+img:hover {
+    transform: scale(1.02);
+}
 
-    <p>
-        <a href="scene1.html">Go Back</a>
-    </p>
-    
+/* choices */
+a {
+    display: block;
+    margin: 12px auto;
+    padding: 14px;
+    width: 80%;
+    max-width: 320px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #4a69bd, #7c83fd);
+    border-radius: 10px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(74,105,189,0.3);
+}
+
+/* back button */
+.back {
+    background: #9ca3af;
+}
+
+.back:hover {
+    background: #6b7280;
+}
+
+/* fade in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>You Signed with the Label </h1>
+
+<p>
+You decide to take the risk and contact the entertainment label.
+</p>
+
+<p>
+After a series of meetings, conversations, and discussions about your future, everything becomes real: 
+</p>
+
+<p class="highlight">You officially sign.</p>
+
+<p>
+This is where your journey in the entertainment industry begins to take shape.
+The company now asks you something important…
+</p>
+
+<img src="image/scenetwoa.jpg" alt="Label signing moment">
+
+<h2>Choose Your Direction</h2>
+
+<a href="scene3a.html">Solo Artist ✨</a>
+
+<a href="scene3b.html">Group Member 🎶</a>
+
+<a href="scene1.html" class="back">Go Back</a>
+
+</div>
+
 </body>
 </html>
