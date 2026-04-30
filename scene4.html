@@ -1,1 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Next Move</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+}
+
+.container {
+    max-width: 750px;
+    margin: 70px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+h1 { text-align: center; }
+
+.subtitle {
+    text-align: center;
+    color: #555;
+}
+
+.option {
+    display: block;
+    padding: 18px;
+    margin: 15px 0;
+    border-left: 5px solid #4a69bd;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 8px;
+    transition: 0.2s;
+    background: #f9fafb;
+}
+
+.option:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.option h3 { margin: 0; }
+
+.option p {
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.safe { border-left-color: #4a69bd; }
+.risk { border-left-color: #c084fc; }
+.neutral { border-left-color: #94a3b8; }
+.danger { border-left-color: #f87171; }
+
+.best { border-left-color: gold; }
+
+.note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Years Later...</h1>
+<p class="subtitle">Your career is stable… but your original dream still lingers.</p>
+
+<a href="ending1.html" class="option safe">
+<h3>Continue Your Career</h3>
+<p></p>
+</a>
+
+<a href="ending2.html" class="option risk">
+<h3>Take a Chance & Join the Industry</h3>
+<p></p>
+</a>
+
+<a href="ending3.html" class="option neutral">
+<h3>Ignore the Feeling</h3>
+<p></p>
+</a>
+
+<a href="ending4.html" class="option danger">
+<h3>Push Yourself Too Far</h3>
+<p></p>
+</a>
+
+<a href="ending5.html" class="option best">
+<h3>Wild Card</h3>
+<p></p>
+</a>
+
+<p class="note">Every choice shapes your outcome.</p>
+
+</div>
+
+</body>
+</html>
