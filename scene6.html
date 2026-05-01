@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Debut Strategy</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fff7cc, #fffdf5);
+    overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 750px;
+    margin: 70px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #b45309;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.option {
+    display: block;
+    padding: 20px;
+    margin: 18px 0;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    background: #fffdf5;
+    border-left: 6px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.option:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* COLORS */
+.social { border-left-color: #facc15; }
+.mv { border-left-color: #fb7185; }
+.live { border-left-color: #34d399; }
+
+.option h3 { margin: 0; }
+.option p { margin-top: 6px; color: #555; }
+
+/* ✨ SPARKLE */
+.sparkle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkleFade 0.8s linear forwards;
+}
+
+@keyframes sparkleFade {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌼 Your Debut Moment</h1>
+<p class="subtitle">How do you want the world to see you first?</p>
+
+<a href="scene7.html" class="option social">
+<h3>📱 Social Media Campaign</h3>
+<p>Build hype, go viral, and let people discover you.</p>
+</a>
+
+<a href="scene7.html" class="option mv">
+<h3>🎥 Music Video Release</h3>
+<p>Drop a high-quality visual that defines your concept.</p>
+</a>
+
+<a href="scene7.html" class="option live">
+<h3>🎤 Live Showcase</h3>
+<p>Show your talent immediately on stage.</p>
+</a>
+
+</div>
+
+<script>
+document.addEventListener("mousemove", function(e) {
+    let sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.left = e.pageX + "px";
+    sparkle.style.top = e.pageY + "px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+        sparkle.remove();
+    }, 800);
+});
+</script>
+
+</body>
+</html>
