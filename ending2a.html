@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Viral Success</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fef9c3, #ffffff);
+    overflow: hidden;
+}
+
+/* confetti */
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: #fbbf24;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    from { transform: translateY(-100vh); }
+    to { transform: translateY(100vh); }
+}
+
+.container {
+    max-width: 700px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 { color: #d97706; }
+
+p { color: #444; line-height: 1.6; }
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #f59e0b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Viral Debut</h1>
+
+<img src="image/viral.jpg" alt="Viral Debut" width="300">
+
+<p>Your debut captures attention instantly. Clips circulate online, your name spreads quickly, and opportunities follow.</p>
+<p>With consistency and timing, you turn a moment into momentum.</p>
+
+<p><strong>You become a recognized name in the industry.</strong></p>
+
+<a href="homework8b.html">Play Again</a>
+
+</div>
+
+<script>
+for (let i = 0; i < 40; i++) {
+    let c = document.createElement("div");
+    c.className = "confetti";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.animationDelay = Math.random() * 3 + "s";
+    document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
