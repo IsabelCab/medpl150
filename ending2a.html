@@ -9,29 +9,21 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(135deg, #fef9c3, #ffffff);
-    overflow: hidden;
+    /* overflow: hidden;  ← REMOVED THIS LINE */
 }
 
-/* CONFETTI */
+/* confetti */
 .confetti {
     position: fixed;
     width: 8px;
     height: 8px;
     background: #fbbf24;
-    top: -10px;
-    animation: fall linear infinite;
+    animation: fall 3s linear infinite;
 }
 
-/* improved animation */
 @keyframes fall {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(110vh) rotate(360deg);
-        opacity: 0.8;
-    }
+    from { transform: translateY(-100vh); }
+    to { transform: translateY(100vh); }
 }
 
 .container {
@@ -42,8 +34,6 @@ body {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    position: relative;
-    z-index: 1;
 }
 
 h1 { color: #d97706; }
@@ -80,21 +70,11 @@ a {
 </div>
 
 <script>
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < 40; i++) {
     let c = document.createElement("div");
     c.className = "confetti";
-    
     c.style.left = Math.random() * 100 + "vw";
-    
-    /* DIFFERENT SPEEDS */
-    c.style.animationDuration = (Math.random() * 3 + 2) + "s";
-    
-    /* STAGGERED START */
-    c.style.animationDelay = Math.random() * 5 + "s";
-    
-    /* RANDOM COLORS */
-    c.style.background = ["#fbbf24","#f59e0b","#fde68a","#fcd34d"][Math.floor(Math.random()*4)];
-    
+    c.style.animationDelay = Math.random() * 3 + "s";
     document.body.appendChild(c);
 }
 </script>
